@@ -15,19 +15,62 @@ Rokid 无线投屏助手是一款面向 Rokid 眼镜设备的桌面工具，支�
 - 支持中文和英文界面
 - 支持 macOS 与 Windows
 
-## 系统要求
+## 软件下载安装与使用
 
-- macOS 13.0 或更高版本
-- Xcode Command Line Tools（包含 Swift 5.10 或兼容版本）
+本节面向直接安装软件的普通用户，不需要下载或编译源码。
+
+### 下载软件
+
+请前往 [v2.0.4 发行版](https://github.com/JellyFlow/Rokid-Wireless-ADB-Source-Code/releases/tag/Latest) 下载：
+
+- macOS：`Rokid-Wireless-Projection-2.0.4.dmg`，支持 Apple Silicon（arm64）与 Intel（x86_64）
+- 眼镜端扫码 APK：`RokidMirrorScan-v5-1.0.4-20260803-204722-system-signed.apk`
+
+### 软件运行要求
+
+- macOS 13.0 或更高版本，或对应的 Windows x64 环境
 - 电脑与眼镜可通过局域网互相访问
 - 使用扫码连接时，需要允许应用访问“本地网络”和“定位服务”；macOS 获取当前 Wi-Fi SSID 需要定位权限
 
-## 快速开始
+### macOS 安装
 
-在终端中进入项目目录：
+1. 打开 DMG，将“Rokid 无线投屏助手.app”拖入“Applications”。
+2. 如 macOS 阻止首次运行，请前往“系统设置 > 隐私与安全性”，在“安全性”区域点按“仍要打开”。
+3. 前往“系统设置 > 隐私与安全性 > 本地网络”，允许 Rokid 无线投屏助手访问本地网络。
+4. 完全退出并重新打开应用。
+
+### 软件使用方法
+
+- **Rokid Glasses 眼镜端**：通过 Rokid AI / Hi Rokid 中的“工具箱 > 眼镜应用管理 > 安装新应用”，安装发行版中的眼镜端扫码 APK。
+- **Rokid Glasses 电脑端**：在“Rokid 无线投屏助手”中点击“扫码连接投屏”，填写 Wi-Fi 信息，然后使用眼镜扫描二维码。
+- **Rokid AR Lite / Rokid AR Studio**：确认电脑和眼镜处于同一网络，填写设备 IP 后点击“开启无线投屏”。
+- ADB 功能仅用于你拥有或已获授权的设备。
+
+#### macOS 权限
+
+如果应用无法获取 SSID 或接收眼镜回调，请检查：
+
+1. 前往“系统设置 > 隐私与安全性 > 本地网络”，允许“Rokid 无线投屏助手”访问本地网络。
+2. 前往“系统设置 > 隐私与安全性 > 定位服务”，允许应用使用定位服务。
+3. 完全退出应用后重新打开。
+
+## 源码开发与构建
+
+本节面向需要阅读、修改、编译或打包项目源码的开发者。普通软件用户无需执行以下命令。
+
+### 开发环境要求
+
+- macOS 13.0 或更高版本
+- Xcode Command Line Tools
+- Swift 5.10 或兼容版本
+- Python 3（仅打包 DMG 时需要）
+
+### 构建源码
+
+在终端中进入源码目录：
 
 ```bash
-cd "$HOME/Desktop/Rokid无线投屏助手-完整源码"
+cd "$HOME/Desktop/Rokid-Wireless-ADB-Source-Code"
 ```
 
 构建 SwiftPM 可执行程序：
@@ -61,32 +104,10 @@ swift build
 
 首次执行 DMG 打包脚本时，会在 `.codex/dmgbuild-venv/` 中创建 Python 虚拟环境并安装 `dmgbuild==1.6.5`。
 
-## macOS 安装
-
-1. 打开 DMG，将“Rokid 无线投屏助手.app”拖入“Applications”。
-2. 如 macOS 阻止首次运行，请前往“系统设置 > 隐私与安全性”，在“安全性”区域点按“仍要打开”。
-3. 前往“系统设置 > 隐私与安全性 > 本地网络”，允许 Rokid 无线投屏助手访问本地网络。
-4. 完全退出并重新打开应用。
-
-## 使用说明
-
-- **Rokid Glasses 眼镜端**：通过 Rokid AI / Hi Rokid 中的“工具箱 > 眼镜应用管理 > 安装新应用”，安装发行版中的眼镜端扫码 APK。
-- **Rokid Glasses 电脑端**：在“Rokid 无线投屏助手”中点击“扫码连接投屏”，填写 Wi-Fi 信息，然后使用眼镜扫描二维码。
-- **Rokid AR Lite / Rokid AR Studio**：确认电脑和眼镜处于同一网络，填写设备 IP 后点击“开启无线投屏”。
-- ADB 功能仅用于你拥有或已获授权的设备。
-
-### macOS 权限
-
-如果应用无法获取 SSID 或接收眼镜回调，请检查：
-
-1. 前往“系统设置 > 隐私与安全性 > 本地网络”，允许“Rokid 无线投屏助手”访问本地网络。
-2. 前往“系统设置 > 隐私与安全性 > 定位服务”，允许应用使用定位服务。
-3. 完全退出应用后重新打开。
-
-## 项目目录
+### 项目目录
 
 ```text
-Rokid无线投屏助手-完整源码/
+Rokid-Wireless-ADB-Source-Code/
 ├── Package.swift                    # SwiftPM 包定义和 macOS 最低版本
 ├── README.md                        # 中文说明
 ├── README.en.md                     # English documentation
@@ -146,7 +167,7 @@ Rokid无线投屏助手-完整源码/
 - `.codex/signing/`：本地构建所用临时签名钥匙串
 - `.codex/dmgbuild-venv/`：DMG 打包工具的 Python 虚拟环境
 
-## 调试命令
+### 调试命令
 
 ```bash
 # 使用 LLDB 启动

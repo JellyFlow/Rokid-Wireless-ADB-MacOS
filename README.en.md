@@ -15,19 +15,62 @@ Rokid Wireless Projection Assistant is a desktop tool for Rokid eyewear. It supp
 - Chinese and English user interfaces
 - Support for macOS and Windows
 
-## Requirements
+## Software Installation and Usage
 
-- macOS 13.0 or later
-- Xcode Command Line Tools with Swift 5.10 or a compatible version
-- Network connectivity between the Mac and the glasses
+This section is for users who want to install and use the released software. Downloading or compiling the source code is not required.
+
+### Download the Software
+
+Download the packages from the [v2.0.4 release](https://github.com/JellyFlow/Rokid-Wireless-ADB-Source-Code/releases/tag/Latest):
+
+- macOS: `Rokid-Wireless-Projection-2.0.4.dmg`, universal for Apple Silicon (`arm64`) and Intel (`x86_64`)
+- Glasses-side QR scanner APK: `RokidMirrorScan-v5-1.0.4-20260803-204722-system-signed.apk`
+
+### Software Requirements
+
+- macOS 13.0 or later, or a compatible Windows x64 environment
+- Network connectivity between the computer and the glasses
 - Local Network and Location Services permissions for QR-code connection; macOS requires location permission to expose the current Wi-Fi SSID
 
-## Quick Start
+### macOS Installation
 
-Open Terminal and enter the project directory:
+1. Open the DMG and drag **Rokid 无线投屏助手.app** into **Applications**.
+2. If macOS blocks the first launch, open **System Settings > Privacy & Security** and click **Open Anyway** in the Security section.
+3. Open **System Settings > Privacy & Security > Local Network** and allow Rokid Wireless Projection Assistant.
+4. Quit the application completely and reopen it.
+
+### Using the Software
+
+- **Rokid Glasses, glasses side:** In Rokid AI / Hi Rokid, open **Toolbox > Glasses App Management > Install New App**, then install the glasses-side QR scanner APK from the release.
+- **Rokid Glasses, computer side:** Click **QR Code Casting** in Rokid Wireless Projection Assistant, enter the Wi-Fi information, and scan the generated QR code with the glasses.
+- **Rokid AR Lite / Rokid AR Studio:** Make sure the computer and glasses are on the same network, enter the device IP address, and click **Start Wireless Casting**.
+- Use ADB features only with devices you own or are authorized to manage.
+
+#### macOS Permissions
+
+If the application cannot read the SSID or receive a callback from the glasses:
+
+1. Open **System Settings > Privacy & Security > Local Network** and allow Rokid Wireless Projection Assistant.
+2. Open **System Settings > Privacy & Security > Location Services** and allow the application.
+3. Quit the application completely and reopen it.
+
+## Source Development and Building
+
+This section is for developers who want to inspect, modify, build, or package the source code. Regular software users do not need to run these commands.
+
+### Development Requirements
+
+- macOS 13.0 or later
+- Xcode Command Line Tools
+- Swift 5.10 or a compatible version
+- Python 3, only when packaging the DMG
+
+### Building from Source
+
+Open Terminal and enter the source directory:
 
 ```bash
-cd "$HOME/Desktop/Rokid无线投屏助手-完整源码"
+cd "$HOME/Desktop/Rokid-Wireless-ADB-Source-Code"
 ```
 
 Build the SwiftPM executable:
@@ -61,32 +104,10 @@ Build outputs are written to `dist/`:
 
 On its first run, the DMG packaging script creates a Python virtual environment under `.codex/dmgbuild-venv/` and installs `dmgbuild==1.6.5`.
 
-## macOS Installation
-
-1. Open the DMG and drag **Rokid 无线投屏助手.app** into **Applications**.
-2. If macOS blocks the first launch, open **System Settings > Privacy & Security** and click **Open Anyway** in the Security section.
-3. Open **System Settings > Privacy & Security > Local Network** and allow Rokid Wireless Projection Assistant.
-4. Quit the application completely and reopen it.
-
-## Usage
-
-- **Rokid Glasses, glasses side:** In Rokid AI / Hi Rokid, open **Toolbox > Glasses App Management > Install New App**, then install the glasses-side QR scanner APK from the release.
-- **Rokid Glasses, computer side:** Click **QR Code Casting** in Rokid Wireless Projection Assistant, enter the Wi-Fi information, and scan the generated QR code with the glasses.
-- **Rokid AR Lite / Rokid AR Studio:** Make sure the computer and glasses are on the same network, enter the device IP address, and click **Start Wireless Casting**.
-- Use ADB features only with devices you own or are authorized to manage.
-
-### macOS Permissions
-
-If the application cannot read the SSID or receive a callback from the glasses:
-
-1. Open **System Settings > Privacy & Security > Local Network** and allow Rokid Wireless Projection Assistant.
-2. Open **System Settings > Privacy & Security > Location Services** and allow the application.
-3. Quit the application completely and reopen it.
-
-## Project Structure
+### Project Structure
 
 ```text
-Rokid无线投屏助手-完整源码/
+Rokid-Wireless-ADB-Source-Code/
 ├── Package.swift                    # SwiftPM package and macOS deployment target
 ├── README.md                        # Chinese documentation
 ├── README.en.md                     # English documentation
@@ -146,7 +167,7 @@ The following directories are generated and are not source files:
 - `.codex/signing/`: temporary local code-signing keychain
 - `.codex/dmgbuild-venv/`: Python environment used for DMG packaging
 
-## Debugging Commands
+### Debugging Commands
 
 ```bash
 # Launch with LLDB
