@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>Rokid 无线投屏助手</string>
+    <key>CFBundleExecutable</key>
+    <string>RokidNative</string>
+    <key>CFBundleIconFile</key>
+    <string>icon.icns</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.rokid.wireless-projection.native.v2</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>zh_CN</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>zh-Hans</string>
+        <string>en</string>
+    </array>
+    <key>CFBundleName</key>
+    <string>Rokid 无线投屏助手</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+	<string>2.0.4</string>
+    <key>CFBundleVersion</key>
+	<string>2.0.4</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.utilities</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>用于通过局域网接收 Rokid 眼镜回调、连接无线 ADB 并启动投屏。</string>
+    <key>NSLocationUsageDescription</key>
+    <string>用于读取电脑当前连接的 Wi-Fi 名称并生成眼镜扫码投屏二维码。</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>用于读取电脑当前连接的 Wi-Fi 名称并生成眼镜扫码投屏二维码。</string>
+    <key>NSBonjourServices</key>
+    <array>
+        <string>_rokidmirror._tcp</string>
+    </array>
+</dict>
+</plist>

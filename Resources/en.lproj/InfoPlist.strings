@@ -1,0 +1,5 @@
+"CFBundleDisplayName" = "Rokid Wireless Casting Assistant";
+"CFBundleName" = "Rokid Wireless Casting Assistant";
+"NSLocalNetworkUsageDescription" = "Connect to Rokid glasses on the local network for wireless ADB casting.";
+"NSLocationUsageDescription" = "Read the current Wi-Fi name to generate a casting QR code for Rokid glasses.";
+"NSLocationWhenInUseUsageDescription" = "Read the current Wi-Fi name to generate a casting QR code for Rokid glasses.";
