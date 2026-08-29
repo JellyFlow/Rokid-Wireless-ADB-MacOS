@@ -13,7 +13,7 @@ Rokid 无线投屏助手是一款面向 Rokid 眼镜设备的桌面工具，支�
 - 基于 scrcpy 的低延迟画面投屏
 - 读取当前 Mac 的 Wi-Fi SSID，用于生成扫码连接二维码
 - 支持中文和英文界面
-- 支持 macOS 与 Windows
+- 支持 macOS
 
 ## 软件下载安装与使用
 
