@@ -24,6 +24,7 @@ This section is for users who want to install and use the released software. Dow
 Download the packages from the [v2.0.4 release](https://github.com/JellyFlow/Rokid-Wireless-ADB-Source-Code/releases/tag/Latest):
 
 - macOS: `Rokid-Wireless-Projection-2.0.4.dmg`, universal for Apple Silicon (`arm64`) and Intel (`x86_64`)
+- Windows x64: `Rokid-Wireless-Projection-2.0.1-win-x64-setup.exe`
 - Glasses-side QR scanner APK: `RokidMirrorScan-v5-1.0.4-20260803-204722-system-signed.apk`
 
 ### Software Requirements
@@ -38,6 +39,12 @@ Download the packages from the [v2.0.4 release](https://github.com/JellyFlow/Rok
 2. If macOS blocks the first launch, open **System Settings > Privacy & Security** and click **Open Anyway** in the Security section.
 3. Open **System Settings > Privacy & Security > Local Network** and allow Rokid Wireless Projection Assistant.
 4. Quit the application completely and reopen it.
+
+### Windows Installation
+
+1. Run `Rokid-Wireless-Projection-2.0.1-win-x64-setup.exe`.
+2. Follow the installer prompts to complete installation and launch the application.
+3. If Windows Defender or SmartScreen displays a warning, verify the package source and allow the installer to run.
 
 ### Using the Software
 
