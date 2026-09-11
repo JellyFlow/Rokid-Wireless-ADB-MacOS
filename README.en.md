@@ -13,7 +13,7 @@ Rokid Wireless Projection Assistant is a desktop tool for Rokid eyewear. It supp
 - Low-latency screen casting powered by scrcpy
 - Current Mac Wi-Fi SSID detection for QR-code generation
 - Chinese and English user interfaces
-- Support for macOS
+- Support for macOS & Windows
 
 ## Software Installation and Usage
 
