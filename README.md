@@ -24,6 +24,7 @@ Rokid 无线投屏助手是一款面向 Rokid 眼镜设备的桌面工具，支�
 请前往 [v2.0.4 发行版](https://github.com/JellyFlow/Rokid-Wireless-ADB-Source-Code/releases/tag/Latest) 下载：
 
 - macOS：`Rokid-Wireless-Projection-2.0.4.dmg`，支持 Apple Silicon（arm64）与 Intel（x86_64）
+- Windows x64：`Rokid-Wireless-Projection-2.0.1-win-x64-setup.exe`
 - 眼镜端扫码 APK：`RokidMirrorScan-v5-1.0.4-20260803-204722-system-signed.apk`
 
 ### 软件运行要求
@@ -38,6 +39,12 @@ Rokid 无线投屏助手是一款面向 Rokid 眼镜设备的桌面工具，支�
 2. 如 macOS 阻止首次运行，请前往“系统设置 > 隐私与安全性”，在“安全性”区域点按“仍要打开”。
 3. 前往“系统设置 > 隐私与安全性 > 本地网络”，允许 Rokid 无线投屏助手访问本地网络。
 4. 完全退出并重新打开应用。
+
+### Windows 安装
+
+1. 运行 `Rokid-Wireless-Projection-2.0.1-win-x64-setup.exe`。
+2. 按安装程序提示完成安装并启动应用。
+3. 如 Windows Defender 或 SmartScreen 弹出提示，请确认安装包来源后选择允许运行。 
 
 ### 软件使用方法
 
